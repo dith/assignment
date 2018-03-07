@@ -10,8 +10,8 @@
  * JSON PHP Extension
  
 #### Setup:
- 1. `$ git clone git@github.com:dith/assignment.git <target_folder>`
- 1. `$ cd <target_folder>`
+ 1. `$ git clone git@github.com:dith/assignment.git `_`<target_folder>`_
+ 1. `$ cd `_`<target_folder>`_
  1. `$ php artisan key:generate`
  1. run the tests: `$ phpunit`
 
