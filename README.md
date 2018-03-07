@@ -12,6 +12,7 @@
 #### Setup:
  1. `$ git clone git@github.com:dith/assignment.git `_`<target_folder>`_
  1. `$ cd `_`<target_folder>`_
+ 1. `$ composer install`
  1. `$ php artisan key:generate`
  1. run the tests: `$ phpunit`
 
