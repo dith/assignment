@@ -1,24 +1,24 @@
 <?php
 
+/* changed namespace to App\Misc for the sake of mocking built-in function scandir */
+namespace App\Misc;
+use Tests\TestCase;
+
 /* To mock built-in function scandir()
  * Alternatively, can use vfsStream to mock file-system.
  **/
-namespace App\Misc;
 function scandir($dir)
 {
-    return AssignmentQ1Test::$all_files ?: \scandir($dir);
+    return AssignmentQ1Test::$allFiles ?: \scandir($dir);
 }
-
-use Tests\TestCase;
-use App\Misc\AssignmentQ1;
 
 class AssignmentQ1Test extends TestCase
 {
-    public static $all_files;
+    public static $allFiles;
 
     public function testGetDetailsOnly()
     {
-        self::$all_files = [
+        self::$allFiles = [
             'EVoucherH1709250947.csv',
             'EVoucherD1709250947.csv',
             'ERVoucherH1709230947.csv',
@@ -42,7 +42,7 @@ class AssignmentQ1Test extends TestCase
 
     protected function tearDown()
     {
-        self::$all_files = null;
+        self::$allFiles = null;
     }
 }
 
